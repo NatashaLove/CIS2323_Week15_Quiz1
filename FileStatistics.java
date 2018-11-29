@@ -15,8 +15,13 @@ public class FileStatistics {
 		{
 			//method readAttributes() - returns an instance of BasicAttributes class
 			BasicFileAttributes attr = Files.readAttributes(filePath, BasicFileAttributes.class);
+			
+			//filePath.getFileName() - to retrieve name
 			System.out.println("File "+ f);
+			
+			//filePath.toString() - to see the folder path
 			System.out.println("File is in the same directory? "+ attr.isDirectory());
+			
 			System.out.println("Creation time " + attr.creationTime());
 			System.out.println("Last modified time " + attr.lastModifiedTime());
 			System.out.println("Size "+ attr.size());
